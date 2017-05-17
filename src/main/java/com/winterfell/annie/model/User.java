@@ -4,7 +4,7 @@ public class User extends AbstractModel {
 	/** 用户名*/
 	private String username;
 	/** 密码 */
-	private String pwd;
+	private String password;
 	
 	public String getUsername() {
 		return username;
@@ -12,10 +12,10 @@ public class User extends AbstractModel {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public String getPwd() {
-		return pwd;
+	public String getPassword() {
+		return password;
 	}
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

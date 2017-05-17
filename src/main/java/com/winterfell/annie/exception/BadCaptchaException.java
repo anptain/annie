@@ -2,9 +2,9 @@ package com.winterfell.annie.exception;
 
 import org.springframework.security.core.AuthenticationException;
 
-public class RecaptchaAuthenticationException extends AuthenticationException{
+public class BadCaptchaException extends AuthenticationException{
 
-	public RecaptchaAuthenticationException(String msg) {
+	public BadCaptchaException(String msg) {
 		super(msg);
 	}
 
