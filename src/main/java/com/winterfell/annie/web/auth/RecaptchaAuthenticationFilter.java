@@ -1,4 +1,4 @@
-package com.winterfell.annie.config;
+package com.winterfell.annie.web.auth;
 
 import java.io.IOException;
 

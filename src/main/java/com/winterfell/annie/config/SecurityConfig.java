@@ -10,6 +10,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import com.winterfell.annie.service.WebUserDetailService;
+import com.winterfell.annie.web.auth.AuthFailureHandler;
+import com.winterfell.annie.web.auth.AuthSuccessHandler;
+import com.winterfell.annie.web.auth.RecaptchaAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -18,7 +21,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	private WebUserDetailService webUserDetailService;
 	@Autowired
 	private RecaptchaAuthenticationFilter recaptchaAuthenticationFilter;
-	
+	@Autowired
+	private AuthFailureHandler authFailureHandler;
+	@Autowired
+	private AuthSuccessHandler authSuccessHandler;
+
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 		web.ignoring().antMatchers("/static/**"); // #3O
@@ -26,17 +33,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http
-        .authorizeRequests()
-            .antMatchers("/", "/home").permitAll()
-            .anyRequest().authenticated()
-            .and()
-        .formLogin()
-            .loginPage("/login")
-            .permitAll()
-            .and()
-        .logout()
-            .permitAll();
+		http.authorizeRequests().antMatchers("/", "/home").permitAll().anyRequest().authenticated().and().formLogin()
+				.loginPage("/login").failureHandler(authFailureHandler).successHandler(authSuccessHandler).permitAll()
+				.and().logout().permitAll();
 		// 禁用 csrf
 		http.csrf().disable();
 		// session管理
@@ -50,5 +49,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(webUserDetailService);
 	}
-	
+
 }
