@@ -1,4 +1,6 @@
-package com.winterfell.annie.model;
+package com.winterfell.annie.model.user;
+
+import com.winterfell.annie.model.AbstractModel;
 
 public class User extends AbstractModel {
 	/** 用户名*/
