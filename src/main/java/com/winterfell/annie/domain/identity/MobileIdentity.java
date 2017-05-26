@@ -1,10 +1,10 @@
-package com.winterfell.annie.model.identity;
+package com.winterfell.annie.domain.identity;
 
 import java.util.Date;
 
-import com.winterfell.annie.model.AbstractModel;
+import com.winterfell.annie.domain.AbstractDomain;
 
-public class MobileIdentity extends AbstractModel{
+public class MobileIdentity extends AbstractDomain{
 	/**姓名*/
 	private String name;
 	/**身份证号码*/

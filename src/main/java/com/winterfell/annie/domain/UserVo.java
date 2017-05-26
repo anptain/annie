@@ -1,4 +1,4 @@
-package com.winterfell.annie.model;
+package com.winterfell.annie.domain;
 
 import java.util.Collection;
 

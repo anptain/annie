@@ -1,4 +1,4 @@
-package com.winterfell.annie.exception;
+package com.winterfell.annie.web.auth;
 
 import org.springframework.security.core.AuthenticationException;
 

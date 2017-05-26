@@ -22,7 +22,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.GenericFilterBean;
 
 import com.winterfell.annie.constants.AppConstant;
-import com.winterfell.annie.exception.BadCaptchaException;
 @Component
 public class RecaptchaAuthenticationFilter extends GenericFilterBean {
 	private RememberMeServices rememberMeServices = new NullRememberMeServices();

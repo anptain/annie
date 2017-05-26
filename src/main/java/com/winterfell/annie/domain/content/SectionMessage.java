@@ -1,8 +1,8 @@
-package com.winterfell.annie.model.content;
+package com.winterfell.annie.domain.content;
 
-import com.winterfell.annie.model.AbstractModel;
+import com.winterfell.annie.domain.AbstractDomain;
 
-public class SectionMessage extends AbstractModel{
+public class SectionMessage extends AbstractDomain{
 	private Long sectionId;
 	private Long userId;
 	private String body;

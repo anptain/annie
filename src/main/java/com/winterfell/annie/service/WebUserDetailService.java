@@ -6,8 +6,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.winterfell.annie.mapper.UserMapper;
-import com.winterfell.annie.model.UserVo;
+import com.winterfell.annie.domain.UserVo;
+import com.winterfell.annie.mapper.user.UserMapper;
 @Service
 public class WebUserDetailService implements UserDetailsService{
 	

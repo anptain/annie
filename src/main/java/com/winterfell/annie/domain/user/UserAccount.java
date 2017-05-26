@@ -1,10 +1,10 @@
-package com.winterfell.annie.model.user;
+package com.winterfell.annie.domain.user;
 
 import java.math.BigDecimal;
 
-import com.winterfell.annie.model.AbstractModel;
+import com.winterfell.annie.domain.AbstractDomain;
 
-public class UserAccount extends AbstractModel{
+public class UserAccount extends AbstractDomain{
 	/**用户ID*/
 	private Long userId;
 	/**账户金额*/

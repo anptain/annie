@@ -1,12 +1,12 @@
-package com.winterfell.annie.model.user;
+package com.winterfell.annie.domain.user;
 
-import com.winterfell.annie.model.AbstractModel;
+import com.winterfell.annie.domain.AbstractDomain;
 /**
  * 微信OpenId登录用户
  * 
  * @author xujing
  */
-public class WxOpenId extends AbstractModel{
+public class WxOpenId extends AbstractDomain{
 	/**关联User*/
 	private Long userId;
 	/**openId*/

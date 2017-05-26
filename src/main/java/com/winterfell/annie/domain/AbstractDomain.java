@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  *******************************************************************************/
-package com.winterfell.annie.model;
+package com.winterfell.annie.domain;
 
 import java.util.Date;
 
@@ -15,7 +15,7 @@ import java.util.Date;
  * 
  * @author calvin
  */
-public abstract class AbstractModel{
+public abstract class AbstractDomain{
 	private Long id;
 	private Long version;// 版本
 	private Boolean deleted; //是否删除

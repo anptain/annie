@@ -12,9 +12,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.winterfell.annie.exception.BadCaptchaException;
-import com.winterfell.annie.mapper.UserMapper;
-import com.winterfell.annie.service.UserService;
+import com.winterfell.annie.mapper.user.UserMapper;
+import com.winterfell.annie.service.user.UserService;
+import com.winterfell.annie.web.auth.BadCaptchaException;
 
 @Controller
 public class HomeController {

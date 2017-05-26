@@ -1,4 +1,4 @@
-package com.winterfell.annie.service;
+package com.winterfell.annie.service.user;
 
 import org.springframework.stereotype.Service;
 

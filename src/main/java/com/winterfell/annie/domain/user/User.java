@@ -1,8 +1,8 @@
-package com.winterfell.annie.model.user;
+package com.winterfell.annie.domain.user;
 
-import com.winterfell.annie.model.AbstractModel;
+import com.winterfell.annie.domain.AbstractDomain;
 
-public class User extends AbstractModel {
+public class User extends AbstractDomain {
 	/** 用户名*/
 	private String username;
 	/** 密码 */

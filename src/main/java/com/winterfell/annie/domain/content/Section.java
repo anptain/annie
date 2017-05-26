@@ -1,10 +1,10 @@
-package com.winterfell.annie.model.content;
+package com.winterfell.annie.domain.content;
 
 import java.util.Date;
 
-import com.winterfell.annie.model.AbstractModel;
+import com.winterfell.annie.domain.AbstractDomain;
 
-public class Section extends AbstractModel{
+public class Section extends AbstractDomain{
 	/**用户ID*/
 	private Long userId;
 	/**内容*/
@@ -13,6 +13,8 @@ public class Section extends AbstractModel{
 	private Date pubdate;
 	/**点赞人数*/
 	private Integer likeCount;
+	/**留言人数*/
+	private Integer messageCount;
 	
 	public Date getPubdate() {
 		return pubdate;
@@ -37,5 +39,11 @@ public class Section extends AbstractModel{
 	}
 	public void setBodyWrapId(Long bodyWrapId) {
 		this.bodyWrapId = bodyWrapId;
+	}
+	public Integer getMessageCount() {
+		return messageCount;
+	}
+	public void setMessageCount(Integer messageCount) {
+		this.messageCount = messageCount;
 	}
 }
