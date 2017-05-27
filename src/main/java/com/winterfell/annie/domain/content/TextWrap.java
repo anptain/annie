@@ -1,8 +1,13 @@
 package com.winterfell.annie.domain.content;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import com.winterfell.annie.domain.AbstractDomain;
 
-public class BodyWrap extends AbstractDomain{
+@Entity
+@Table(name = "t_text_wrap")
+public class TextWrap extends AbstractDomain{
 	private String body;
 	public String getBody() {
 		return body;

@@ -19,7 +19,15 @@
     	select * from an_section where id =#{id}
     </select>
     
-    <select id="selectByUsername" resultType="SectionVo">
-    	select * from an_user where username = #{username} and deleted = 0 
+    <select id="selectSectionVo" resultType="SectionVo">
+    	SELECT _section.id `id`,
+	       _section.pubdate `pubdate`,
+	       _section.like_count `like_count`,
+	       _section.message_count `message_count`,
+	       _user_detail.nickname `pubname`,
+	       _text_wrap.text `text`
+		FROM t_section _section LEFT JOIN t_user _user ON _section.user_id = _user.id 
+		LEFT JOIN t_user_detail _user_detail ON _section.user_id = _user_detail.user_id
+		LEFT JOIN t_text_wrap _text_wrap ON _section.body_wrap_id = _text_wrap.id
     </select>
 </mapper>

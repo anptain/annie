@@ -1,11 +1,13 @@
 package com.winterfell.annie.mapper.content;
 
-import org.apache.ibatis.annotations.Mapper;
 
-import com.winterfell.annie.domain.UserVo;
+import java.util.List;
+
 import com.winterfell.annie.domain.content.Section;
+import com.winterfell.annie.vo.SectionVo;
 
-@Mapper
-public interface SectionMapper {
-	Section findOne(Long id);
+import tk.mybatis.mapper.common.Mapper;
+
+public interface SectionMapper extends Mapper<Section>{
+	List<SectionVo> selectSectionVo();
 }

@@ -2,13 +2,18 @@ package com.winterfell.annie.domain.content;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import com.winterfell.annie.domain.AbstractDomain;
 
+@Entity
+@Table(name = "t_section")
 public class Section extends AbstractDomain{
 	/**用户ID*/
 	private Long userId;
 	/**内容*/
-	private Long bodyWrapId;
+	private Long textWrapId;
 	/**发布时间*/
 	private Date pubdate;
 	/**点赞人数*/
@@ -34,16 +39,16 @@ public class Section extends AbstractDomain{
 	public void setLikeCount(Integer likeCount) {
 		this.likeCount = likeCount;
 	}
-	public Long getBodyWrapId() {
-		return bodyWrapId;
-	}
-	public void setBodyWrapId(Long bodyWrapId) {
-		this.bodyWrapId = bodyWrapId;
-	}
 	public Integer getMessageCount() {
 		return messageCount;
 	}
 	public void setMessageCount(Integer messageCount) {
 		this.messageCount = messageCount;
+	}
+	public Long getTextWrapId() {
+		return textWrapId;
+	}
+	public void setTextWrapId(Long textWrapId) {
+		this.textWrapId = textWrapId;
 	}
 }

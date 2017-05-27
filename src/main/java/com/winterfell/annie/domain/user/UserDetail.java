@@ -2,14 +2,26 @@ package com.winterfell.annie.domain.user;
 
 import java.util.Date;
 
-import com.winterfell.annie.domain.AbstractDomain;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+import com.winterfell.annie.domain.AbstractDomain;
+@Entity
+@Table(name = "t_user_detail") 
 public class UserDetail extends AbstractDomain{
+	/** 用户ID */
 	private Long userId;
+	/** 昵称 */
+	private String nickname;
+	/**电话*/
 	private String phone;
+	/**性别*/
 	private String gender;
+	/**年龄*/
 	private Integer age;
-	private String name;
+	/**真实姓名*/
+	private String realname;
+	/**生日*/
 	private Date birthday;
 	
 	public String getPhone() {
@@ -23,12 +35,6 @@ public class UserDetail extends AbstractDomain{
 	}
 	public void setGender(String gender) {
 		this.gender = gender;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
 	}
 	public Long getUserId() {
 		return userId;
@@ -48,4 +54,17 @@ public class UserDetail extends AbstractDomain{
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
+	public String getNickname() {
+		return nickname;
+	}
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+	public String getRealname() {
+		return realname;
+	}
+	public void setRealname(String realname) {
+		this.realname = realname;
+	}
+	
 }

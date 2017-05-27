@@ -7,6 +7,11 @@ package com.winterfell.annie.domain;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * 统一定义id的entity基类.
  * 
@@ -16,6 +21,9 @@ import java.util.Date;
  * @author calvin
  */
 public abstract class AbstractDomain{
+	@Id
+	@Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Long version;// 版本
 	private Boolean deleted; //是否删除

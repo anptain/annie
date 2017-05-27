@@ -8,9 +8,12 @@ public class SectionVo {
 	private Date pubdate;
 	/**点赞人数*/
 	private Integer likeCount;
+	/**留言人数*/
 	private Integer messageCount;
+	/**发布人*/
 	private String pubname;
-	private String body;
+	/**内容*/
+	private String text;
 	
 	public Long getId() {
 		return id;
@@ -36,17 +39,17 @@ public class SectionVo {
 	public void setPubname(String pubname) {
 		this.pubname = pubname;
 	}
-	public String getBody() {
-		return body;
-	}
-	public void setBody(String body) {
-		this.body = body;
-	}
 	public Integer getMessageCount() {
 		return messageCount;
 	}
 	public void setMessageCount(Integer messageCount) {
 		this.messageCount = messageCount;
+	}
+	public String getText() {
+		return text;
+	}
+	public void setText(String text) {
+		this.text = text;
 	}
 	
 }

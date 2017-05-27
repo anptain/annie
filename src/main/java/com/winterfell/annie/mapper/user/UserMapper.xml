@@ -15,11 +15,8 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.winterfell.annie.mapper.user.UserMapper">
-    <select id="selectOne" resultType="User">
-    	select * from an_user where id =#{id}
-    </select>
     
     <select id="selectByUsername" resultType="UserVo">
-    	select * from an_user where username = #{username} and deleted = 0 
+    	select * from t_user where username = #{username} and deleted = 0 
     </select>
 </mapper>

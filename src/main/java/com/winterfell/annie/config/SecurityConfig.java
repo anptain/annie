@@ -33,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/", "/home").permitAll().anyRequest().authenticated().and().formLogin()
+		http.authorizeRequests().antMatchers("/", "/home","/api/**").permitAll().anyRequest().authenticated().and().formLogin()
 				.loginPage("/login").failureHandler(authFailureHandler).successHandler(authSuccessHandler).permitAll()
 				.and().logout().permitAll();
 		// 禁用 csrf

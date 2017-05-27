@@ -1,7 +1,11 @@
 package com.winterfell.annie.domain.user;
 
-import com.winterfell.annie.domain.AbstractDomain;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+import com.winterfell.annie.domain.AbstractDomain;
+@Entity
+@Table(name = "t_user") 
 public class User extends AbstractDomain {
 	/** 用户名*/
 	private String username;
