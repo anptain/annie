@@ -3,7 +3,7 @@ package com.airball.annie.web.controller;
 public class JsonResult {
 	private int loginState;
 	private int code;
-	private Object content;
+	private Object body;
 
 	public int getLoginState() {
 		return loginState;
@@ -21,11 +21,11 @@ public class JsonResult {
 		this.code = code;
 	}
 
-	public Object getContent() {
-		return content;
+	public Object getBody() {
+		return body;
 	}
 
-	public void setContent(Object content) {
-		this.content = content;
+	public void setBody(Object body) {
+		this.body = body;
 	}
 }

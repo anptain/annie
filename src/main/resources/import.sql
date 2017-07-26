@@ -38,8 +38,8 @@ INSERT INTO `t_user_detail`(`id`,`user_id`,`nickname`,`phone`,`gender`,`age`,`re
 VALUES (1,1,'小米','13631557000','0',20,'小明','1990-01-01',0,0,1,NOW(),1,NOW());
 
 
-DROP TABLE IF EXISTS `t_section`;
-CREATE TABLE `t_section` (
+DROP TABLE IF EXISTS `t_article`;
+CREATE TABLE `t_article` (
   `id` INT AUTO_INCREMENT COMMENT 'ID',
   `user_id` INT COMMENT '用户ID',
   `body_wrap_id` INT COMMENT '内容ID',
@@ -55,7 +55,7 @@ CREATE TABLE `t_section` (
   PRIMARY KEY (`id`) 
 );
 
-INSERT INTO `t_section`(`id`,`user_id`,`body_wrap_id`,`pubdate`,`like_count`,`message_count`,`deleted`,`version`,`created_by`,`created_date`,`last_modified_by`,`last_modified_date`) 
+INSERT INTO `t_article`(`id`,`user_id`,`body_wrap_id`,`pubdate`,`like_count`,`message_count`,`deleted`,`version`,`created_by`,`created_date`,`last_modified_by`,`last_modified_date`) 
 VALUES (1,1,1,'2017-05-27 00:00:00',0,0,0,0,1,NOW(),1,NOW());
 
 

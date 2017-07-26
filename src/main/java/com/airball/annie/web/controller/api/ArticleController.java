@@ -4,23 +4,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.github.pagehelper.PageHelper;
-import com.airball.annie.mapper.content.SectionMapper;
+import com.airball.annie.mapper.content.ArticleMapper;
 import com.airball.annie.web.controller.JsonResult;
 import com.airball.annie.web.controller.PageResult;
+import com.github.pagehelper.PageHelper;
 
 @RestController
-@RequestMapping("api/section")
-public class SectionController {
+@RequestMapping("api/article")
+public class ArticleController {
 	@Autowired
-	private SectionMapper sectionMapper; 
+	private ArticleMapper articleMapper; 
 	
 	
-	@RequestMapping("list")
-	public JsonResult getSection(){
+	@RequestMapping("")
+	public JsonResult getArticle(){
 		PageHelper.startPage(1, 5);
 		PageResult json = new PageResult();
-		json.setContent(sectionMapper.selectSectionVo());
+		json.setBody(articleMapper.selectArticleVo());
 		return json;
 	}
 }
