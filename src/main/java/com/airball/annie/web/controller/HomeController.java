@@ -12,8 +12,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.airball.annie.domain.user.User;
+import com.airball.annie.domain.sys.BankCardBin;
 import com.airball.annie.mapper.content.SectionMapper;
+import com.airball.annie.mapper.sys.BankCardBinMapper;
 import com.airball.annie.mapper.user.UserMapper;
 import com.airball.annie.service.user.UserService;
 import com.airball.annie.web.auth.BadCaptchaException;
@@ -27,9 +28,14 @@ public class HomeController {
 	private UserMapper userMapper;
 	@Autowired
 	private SectionMapper sectionMapper;
+	@Autowired
+	private BankCardBinMapper bankCardBinMapper;
 
 	@RequestMapping(value = "/")
 	public String index(String aa) {
+		for (BankCardBin bankCardBin : bankCardBinMapper.selectAll()) {
+			System.out.println(bankCardBin.getBankName());
+		}
 		return "index";
 	}
 	

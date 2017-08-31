@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 
+import com.airball.annie.utils.CommonBeanFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Configuration
@@ -16,6 +17,11 @@ public class BeanConfiguration {
 	public ObjectMapper objectMapper() {
 		return new ObjectMapper();
 	}
+	
+    @Bean
+    public CommonBeanFactory commonBeanFactory(){
+    	return new CommonBeanFactory();
+    }
 	
 	@Bean
 	public EmbeddedServletContainerCustomizer containerCustomizer() {
