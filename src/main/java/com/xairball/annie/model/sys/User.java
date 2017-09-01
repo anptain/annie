@@ -11,6 +11,8 @@ public class User extends AbstractModel {
 	private String username;
 	/** 密码 */
 	private String password;
+	/** 头像ID */
+	private Long portraitId;
 	
 	public String getUsername() {
 		return username;
@@ -23,5 +25,11 @@ public class User extends AbstractModel {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public Long getPortraitId() {
+		return portraitId;
+	}
+	public void setPortraitId(Long portraitId) {
+		this.portraitId = portraitId;
 	}
 }
