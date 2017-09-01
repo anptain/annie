@@ -1,4 +1,4 @@
-package com.xairball.annie.controller;
+package com.xairball.annie.web.controller;
 
 import javax.servlet.http.HttpSession;
 

@@ -1,4 +1,4 @@
-package com.xairball.annie.controller;
+package com.xairball.annie.web;
 
 import java.util.List;
 
